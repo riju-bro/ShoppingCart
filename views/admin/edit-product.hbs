@@ -1,0 +1,16 @@
+<div class="col-md-6">
+    <form method="post" action="/admin/edit-product" enctype="multipart/form-data">
+        <label for="name">Product Name</label>
+        <input type="text" name="name" class="form-control" value="{{product.name}}">
+        <label for="price">Price</label>
+        <input type="number" name="price" class="form-control" value="{{product.price}}">
+        <label for="name">Description</label>
+        <input type="text" name="description" class="form-control" value="{{product.description}}"> <br>
+        <img src="/product-images/{{product._id}}.jpg" alt="Product Image" style="height: 100px; width: auto;"><br><br>               
+        <label for="image">Product Image</label>
+        <input type="file" name="image" class="form-control">
+        <input type="text" value="{{product._id}}" name="_id" hidden>
+        <button class="btn btn-success" type="submit">SUBMIT</button>
+
+    </form>
+</div>
